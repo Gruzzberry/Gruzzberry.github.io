@@ -3985,3 +3985,63 @@
 			}
 
 		}
+
+/* Container to make image and text align in height */
+.equal-height-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap as needed */
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+/* Flex child elements */
+.equal-height-container > div {
+    flex: 1 1 45%; /* Ensures equal width */
+    display: flex;
+    flex-direction: column;
+	margin: 0 !important; 
+}
+
+/* Image styling */
+.image.fit img {
+    width: 100%; /* Ensures image spans the width */
+    height: 100%; /* Ensures image fills height */
+    object-fit: cover; /* Fills the container while maintaining aspect ratio */
+	
+}
+
+.equal-height-container {
+    display: flex;
+    align-items: stretch; /* Ensures both child elements stretch to the same height */
+    gap: 20px; /* Optional spacing between image and text */
+}
+
+
+.equal-height-container .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures text content is centered vertically */
+}
+
+/* Target only the specific image inside the equal-height-container */
+.equal-height-container .image.fit img {
+    margin: 0 !important; /* Override the default margin */
+}
+
+
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .equal-height-container {
+        flex-direction: column; /* Stacks content vertically on small screens */
+    }
+
+    .equal-height-container > div {
+        flex: none;
+        width: 100%;
+    }
+}
+
