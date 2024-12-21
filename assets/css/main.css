@@ -3248,7 +3248,7 @@
 			width: 3.5em;
 		}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 390px) {
 
 			.navPanelToggle {
 				display: block;
@@ -4034,7 +4034,7 @@
 
 
 /* Media query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 560px) {
     .equal-height-container {
         flex-direction: column; /* Stacks content vertically on small screens */
     }
@@ -4045,3 +4045,6 @@
     }
 }
 
+#footer {
+    scroll-margin-top: 60px; /* Adjust this value to match your navbar height */
+}
