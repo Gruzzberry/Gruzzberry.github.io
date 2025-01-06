@@ -4034,7 +4034,7 @@
 
 
 /* Media query for smaller screens */
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 480px) {
     .equal-height-container {
         flex-direction: column; /* Stacks content vertically on small screens */
     }
@@ -4045,6 +4045,44 @@
     }
 }
 
-#footer {
-    scroll-margin-top: 60px; /* Adjust this value to match your navbar height */
+/* FAQ Section Styles */
+.faq-section {
+    margin-bottom: 15px;
+}
+
+/* FAQ Title Styles */
+.faq-title {
+    cursor: pointer;
+    font-weight: bold;
+    color: #444;
+    font-size: 18px;
+    padding: 5px 0;
+    transition: color 0.3s;
+    border-bottom: 1px solid #ddd; /* Optional underline for separation */
+}
+
+.faq-title:hover {
+    color: #000;
+}
+
+/* FAQ Content Styles */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin-left: 20px; /* Indent content for better readability */
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-content.open {
+    padding: 10px 0;
+}
+
+.faq-content p {
+    margin: 5px 0;
+}
+
+/* Optional: Active Title State */
+.faq-title.active {
+    color: #000;
 }
